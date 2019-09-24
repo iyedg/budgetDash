@@ -1,19 +1,20 @@
-# Budget classification under LOB2019
+# Nomenclature budgétaire à partir de la LF 2020
 
-## Circulaire
+## Dépenses
 
-### *Article 1:* Expenses classification
+!!! warning "Nomenclature en Français"
+    La nomenclature en Français n'est pas détailiée dans le criculaire, pour la consulter visitez le [lien suivant](https://bit.ly/2kSoOOO)
 
-* نفقات التأجير
-* نفقات التسيير
-* نفقات التدخلات
-* نفقات الاستثمار
-* نفقات العمليات المالية
-* نفقات التمويل
-* النفقات الطارئة وغير الموزعة
-
-### *Article 2:* Allocation
-
+| Partie (AR)                  | Partie (FR)                         |
+|------------------------------|-------------------------------------|
+| نفقات التأجير                | Dépenses de rémunérations           |
+| نفقات التسيير                | Dépenses de moyens de services      |
+| نفقات التدخلات                | Dépenses d'interventions            |
+| نفقات الاستثمار               | Dépenses d'investissements          |
+| نفقات العمليات المالية       | Dépenses des opérations financières |
+| نفقات التمويل                | Les charges de financement          |
+| النفقات الطارئة وغير الموزعة | Dépenses imprévus et non réparties  |
+  
 ## Organization
 
 ```mermaid
@@ -35,8 +36,6 @@ graph TD
     pap3 --> rap3[RAP]
 ```
 
-### *Articles 4 - 5*: Code
-
 $$
 \overbrace{*}^{\text{Code du programme}} \underbrace{*}_{\text{Code du sous-programme}} \overbrace{***}^{\text{Code de l'article}}
 $$
@@ -54,7 +53,27 @@ $$
 * $8$ est le code du sous-programme.
 * $100$ est le code de l'article "المنح المخولة للسلط العمومية"
 
-### Glossaire
+## Recettes
+
+!!! bug "La nomenclature des recettes"
+    وتجدر الإشارة إلى أنه بهدف المحافظة على المعطى المتعلق بمصادر التمويل، فإنه تم تخصيص خانة في النظام المعلوماتي للتنصيص عليه كما يلي
+    ```
+        * موارد عامة للميزانية
+        * قروض خارجية موظفة
+        * حسابات خاصة فالخزينة
+        * حساب أموال المشاركة
+    ```
+
+!!! bug "Nomenclature en FR n'est pas officielle"
+    Source LOB, en attendant la traduction en FR
+
+| (AR)                  | (FR)                  |
+|-----------------------|-----------------------|
+| المداخيل الجبائية     | Recettes fiscales     |
+| المداخيل غير الجبائية | Recettes non fiscales |
+| الهبات                | Dons                  |
+
+## Glossaire
 
 * **RDP**
 :   Responsable de programme

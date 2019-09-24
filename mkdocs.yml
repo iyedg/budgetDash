@@ -4,6 +4,18 @@ theme:
         palette:
                 primary: 'Teal'
                 accent: 'Deep Orange'
+nav:
+    - Introduction: index.md
+    - 'Guidelines de saisie':
+      - 'Introduction': 'Data_Entry_Guidelines/introduction.md'
+    - 'GBO':
+      - "Vue d'ensemble": 'Gestion_du_Budget_par_Objectif/vue_ensemble.md'
+      - 'Nomenclature budgétaire': 'Gestion_du_Budget_par_Objectif/budget_classification.md'
+    - 'Site Web':
+      - 'Formules': 'Site_web/formules.md'
+      - 'ERD': 'Site_web/ERD.md'
+    - 'A propos': 'about.md'
+
 markdown_extensions:
   - admonition
   - footnotes
