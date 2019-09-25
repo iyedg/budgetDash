@@ -3,22 +3,10 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 
 from budget_dash.app import app
-from budget_dash.layouts import layout1, layout2
+from budget_dash.layouts import layout
 import budget_dash.callbacks as callbacks
 
-app.layout = html.Div(
-    [dcc.Location(id="url", refresh=False), html.Div(id="page-content")]
-)
-
-
-@app.callback(Output("page-content", "children"), [Input("url", "pathname")])
-def display_page(pathname):
-    if pathname == "/apps/app1":
-        return layout1
-    elif pathname == "/apps/app2":
-        return layout2
-    else:
-        return "404"
+app.layout = layout
 
 
 if __name__ == "__main__":

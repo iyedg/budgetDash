@@ -1,6 +1,7 @@
 import dash
 
 external_stylesheets = [
+    "https://fonts.googleapis.com/icon?family=Material+Icons",
     "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
 ]
 external_scripts = [
