@@ -6,33 +6,33 @@ from .material.grid import column, row, container
 from .material.text_input import text_input
 from .material.icon import icon
 from .material.button import button
+from .material.tabs import tabs, tab
+
 
 layout = container(
-    row(
-        column(
-            size="s12",
-            children=card(
-                card_title="Saisie budget",
-                card_content=[
-                    row(column(size="s12", children=text_input("mission", "Mission"))),
-                    row(
-                        column(
-                            size="s12",
-                            children=text_input("organization", "Organisation"),
-                        )
-                    ),
-                    row(
-                        column(
-                            size="s12", children=button(fab=True, icon=icon("cloud"))
-                        )
-                    ),
-                    row(
-                        column(
-                            size="s12", children=button(name="add", icon=icon("add", side="right"))
-                        )
-                    ),
-                ],
-            ),
-        )
-    )
+    [
+        card(
+            card_title="Saisie",
+            card_content=[
+                tabs(
+                    [
+                        tab(
+                            name="General",
+                            size="s3",
+                            children=[
+                                text_input(input_id="general_input", label="General")
+                            ],
+                            active=True,
+                        ),
+                        tab(
+                            name="Budget",
+                            size="s3",
+                            children=[html.P("Budget paragraph content")],
+                        ),
+                    ]
+                ),
+            ],
+        ),
+    ]
 )
+

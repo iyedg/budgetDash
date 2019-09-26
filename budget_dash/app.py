@@ -5,7 +5,8 @@ external_stylesheets = [
     "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css",
 ]
 external_scripts = [
-    "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+    "https://code.jquery.com/jquery-3.2.1.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js",
 ]
 
 app = dash.Dash(
@@ -13,5 +14,6 @@ app = dash.Dash(
     external_stylesheets=external_stylesheets,
     external_scripts=external_scripts,
 )
+
 server = app.server
 app.config.suppress_callback_exceptions = True
