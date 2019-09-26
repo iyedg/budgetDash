@@ -11,6 +11,7 @@ def text_input(
     _type="text",
     placeholder="",
     validate=True,
+    className="",
     *args,
     **kwargs,
 ):
@@ -46,7 +47,7 @@ def text_input(
             dcc.Input(
                 *args,
                 **kwargs,
-                className=f"{input_validate}",
+                className=f"{input_validate} {className}",
                 id=input_id,
                 placeholder=placeholder,
                 value=value,
