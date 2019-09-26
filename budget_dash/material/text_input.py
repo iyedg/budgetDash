@@ -4,7 +4,15 @@ from loguru import logger
 
 
 def text_input(
-    input_id, label="", value="", _type="text", placeholder="", *args, **kwargs
+    # TODO: use helper texts from https://materializecss.com/text-inputs.html
+    input_id,
+    label="",
+    value="",
+    _type="text",
+    placeholder="",
+    validate=True,
+    *args,
+    **kwargs,
 ):
     ALLOWED_TYPES = (
         "text",
@@ -26,14 +34,19 @@ def text_input(
         label_active = "active"
     else:
         label_active = ""
-    logger.debug(_type)
-    return html.Div(
-        className="input-field",
+
+    if validate:
+        input_validate = "validate"
+    else:
+        input_validate = ""
+    input_ = html.Div(
+        className=f"input-field",
         children=[
-            html.Label(label, className=label_active),
+            html.Label(label, className=f"{label_active}"),
             dcc.Input(
                 *args,
                 **kwargs,
+                className=f"{input_validate}",
                 id=input_id,
                 placeholder=placeholder,
                 value=value,
@@ -41,4 +54,5 @@ def text_input(
             ),
         ],
     )
+    return input_
 

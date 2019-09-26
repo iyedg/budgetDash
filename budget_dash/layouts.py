@@ -1,35 +1,38 @@
 import dash_core_components as dcc
 import dash_html_components as html
+
 from .material.card import card
-from .material.stepper import stepper, step
+from .material.grid import column, row, container
 from .material.text_input import text_input
-from .material.grid import row, column
+from .material.icon import icon
+from .material.button import button
 
-
-layout = html.Div(
-    [
-        row(
-            [
-                column(
-                    text_input(
-                        input_id="organization",
-                        label="Select organization",
-                        _type="number",
+layout = container(
+    row(
+        column(
+            size="s12",
+            children=card(
+                card_title="Saisie budget",
+                card_content=[
+                    row(column(size="s12", children=text_input("mission", "Mission"))),
+                    row(
+                        column(
+                            size="s12",
+                            children=text_input("organization", "Organisation"),
+                        )
                     ),
-                    "s4",
-                ),
-                column(
-                    text_input(
-                        input_id="mission", label="Select mission", _type="password"
+                    row(
+                        column(
+                            size="s12", children=button(fab=True, icon=icon("cloud"))
+                        )
                     ),
-                    size="s4",
-                ),
-                column(
-                    text_input(input_id="email", label="Select mission", _type="email"),
-                    size="s3",
-                ),
-            ]
+                    row(
+                        column(
+                            size="s12", children=button(name="add", icon=icon("add", side="right"))
+                        )
+                    ),
+                ],
+            ),
         )
-    ],
-    className="container",
+    )
 )

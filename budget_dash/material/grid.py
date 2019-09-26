@@ -9,3 +9,6 @@ def row(children):
 def column(children, size):
     className = f"col {size}"
     return html.Div(className=className, children=children)
+
+def container(children=None):
+    return html.Div(className="container", children=children)
